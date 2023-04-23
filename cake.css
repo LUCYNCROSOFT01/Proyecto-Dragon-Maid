@@ -1,0 +1,81 @@
+body{
+  background-image:url("https://i.pinimg.com/564x/f2/fa/d0/f2fad08e6b1f9f36627a5b463ca033e3.jpg");
+   background-size: cover;
+            background-position: center;
+            background-repeat: no-repeat;
+
+}
+
+form{
+  background: #ffffff;
+  margin: 100px auto;
+  padding: 15px 40px 40px 40px;
+  width: 70%;
+}
+
+.tab p{
+  font-size: 20px;
+  margin: 0 0 10px 0;
+}
+
+input{
+  margin: 10px 0;
+  padding: 10px;
+  box-sizing: border-box;
+  width: 100%;
+  font-size: 17px;
+  border: 1px solid #aaaaaa;
+}
+
+.index-btn-wrapper{
+  display: flex;
+}
+
+.index-btn{
+  margin: 20px 15px 0 0;
+  background: #941F51;
+  color: #ffffff;
+  border: none;
+  padding: 10px 20px;
+  font-size: 17px;
+  cursor: pointer;
+  transition: 0.3s;
+}
+
+.index-btn:hover{
+  color: pink;
+  opacity: 0.8;
+}
+
+.step{
+  height: 30px;
+  width: 30px;
+  line-height: 30px;
+  margin: 0 2px;
+  color: white;
+  background: #941F51;
+  border-radius: 50%;
+  display: inline-block;
+  opacity: 0.25;
+}
+
+table {
+  font-family: arial, sans-serif;
+  border-collapse: collapse;
+  width: 100%;
+}
+
+td, th {
+  border: 1px solid pink;
+  text-align: left;
+  padding: 8px;
+}
+
+tr:nth-child(even) {
+  background-color: #FFE7F8;
+}
+
+
+
+
+

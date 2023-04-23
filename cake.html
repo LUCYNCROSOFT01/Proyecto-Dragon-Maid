@@ -1,0 +1,167 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta Charset = "UTF-8">
+  <meta http-equiv="X-UA-Compatible" Content = "IE-edged">
+    <title>Maid cafe</title>
+    <link rel="stylesheet" href="cake.css">
+    
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+  </head>
+   
+   <style>
+    h1 { color: #941F51; }
+        h2 { color: #941F51; }
+  </style>
+  
+
+  <body>
+<script>
+
+      
+      alert("Bienvenido a Maid cafe, Realice su orden A continuacion ")
+    </script>
+
+<form id="myForm" action="cake.php" method="post" autocomplete = "off">
+      
+      <h1 align = center>Maid cafe Kobayashi-San </h1>
+
+      <div style="text-align:center;">
+        <span class="step" id = "step-1">1</span>
+        <span class="step" id = "step-2">2</span>
+      </div>
+<br><br>
+<table>
+  <tr>
+    <th>POSTRES</th>
+    <th>PORCIONES</th>
+    <th>PRECIO</th>
+</tr>
+  <tr>
+    <td>Corteza de Cacao</td>
+    <td>10pd</td>
+    <td>RD$ 5,500</td>
+  </tr>
+  <tr>
+    <td>Bodegon de Fresa</td>
+    <td>12pd</td>
+    <td>RD$5,5000</td>
+  </tr>
+  <tr>
+    <td>Trazo de Uva</td>
+    <td>15pd</td>
+    <td>RD$3,000</td>
+  </tr>
+  <tr>
+    <th>BEBIDAS</th>
+    <th>TAMAÑO</th>
+    <th>PRECIO</th>
+</tr>
+  <tr>
+    <td>Latte de Fresa</td>
+    <td>8oz</td>
+    <td>RD$500</td>
+  </tr>
+  <tr>
+    <td>Cafe Americano</td>
+    <td>12oz</td>
+    <td>RD$250</td>
+  </tr>
+</table>
+
+      <div class="tab" id = "tab-1">
+        
+        <h2>FACTURA TU PEDIDO:</h2>
+        <label>Fecha de Realizacion:</label>
+        <input type = "date" placeholder="Fecha de ingreso" id="FechaIng" name="FechaIng">
+
+        
+         <label>Hora del Pedido:</label>
+        <input type = "time" placeholder="Hora del pedido" id="Horaped" name="Horaped">
+        
+        <input type = "text" placeholder="Nombre del Cliente" id="Nombre" name="Nombre">
+        
+        <input type = "text" placeholder="Cantidad de producto" id="Cantidad" name="Cantidad">
+
+       <input type = "text" placeholder="Producto" id="Producto" name="Producto">
+       
+      Seleccionar Tamaño: 
+<select>
+  <option selected="selected">  </option>
+  <option> 8oz</option>
+  <option> 12oz</option>
+ </select>
+<br><br>
+
+  Seleccionar Porciones: 
+<select>
+  <option selected="selected">  </option>
+  <option> 10pc </option>
+  <option> 15pc </option>
+  <option> 12pc</option>
+</select>
+       
+       
+        <input type = "text" placeholder="Precio" id="Precio" name="Precio">
+       
+       <input type = "text" placeholder="porcentaje" id="porcentaje" name="porcentaje">
+
+    Seleccionar Metodo de pago: 
+<select>
+  <option selected="selected">  </option>
+  <option> Tarjeta</option>
+  <option> Efectivo</option>
+  <option> Cheque</option>
+   <option> Bono</option>
+</select>
+
+        <input type = "tel" placeholder="Telefono" id="Telefono" name="Telefono">
+        
+        <input type = "tel" placeholder="Celular" id="Celular" name="Celular">
+        
+        <input type = "text" placeholder="Direccion" id="Direccion" name="Direccion">
+        
+
+        <div class="index-btn-wrapper">
+          <div >
+           <button class = "index-btn" type="submit" name="submit" style = "background: #941F51;">Enviar</button>
+         
+        </div>
+      
+</div>
+    </form>
+
+    <script>
+      // Default tab
+      $(".tab").css("display", "none");
+      $("#tab-1").css("display", "block");
+
+      function run(hideTab, showTab){
+        if(hideTab < showTab){ // If not press previous button
+          // Validation if press next button
+          var currentTab = 0;
+          x = $('#tab-'+hideTab);
+          y = $(x).find("input")
+          for (i = 0; i < y.length; i++){
+            if (y[i].value == ""){
+              $(y[i]).css("background", "#ffdddd");
+              return false;
+            }
+          }
+        }
+
+        // Progress bar
+        for (i = 1; i < showTab; i++){
+          $("#step-"+i).css("opacity", "1");
+        }
+
+        // Switch tab
+        $("#tab-"+hideTab).css("display", "none");
+        $("#tab-"+showTab).css("display", "block");
+        $("input").css("background", "#fff");
+      } 
+
+  
+    </script>
+  </body>
+</html>
